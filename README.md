@@ -1,24 +1,71 @@
-# This is my Capstone Research Project Repository
-This repository contains all my current research findings dealing with my topic.
+# Capstone Research Project: Hybrid Quantum Neural Networks (HQNNs)
 
-My topic is __Quantum Neural Networks (QNNs)__. 
+**Author:** Andrew Nerud  
+**Institution:** Saint John’s University  
+**Major:** Computer Science and Mathematics  
+**Advisor:** Dr. Michael Heroux
 
-## My Current Research Direction:
-1. Survey of Quantum Neural Networks
-    * Explore the history, foundational concepts, and recent advances in QNNs.
-    * Compare various architectures of QNNs (e.g., Variational Quantum Circuits, Quantum Convolutional Networks).
-    * Summarize key breakthroughs and limitations in QNN development.
+## Overview
 
-2. Technical Analysis: Deep Dive into Hybrid Quantum-Classical Neural Networks
-   * Computational efficiency (where QNNs might offer advantages).
-   * Scalability (hardware constraints).
+This repository contains all materials, findings, and code associated with my senior capstone research project on **Hybrid Quantum Neural Networks (HQNNs)**. The research evaluates HQNNs in terms of model efficiency, parameter reduction, generalization capacity, and practical viability, with applications spanning image classification, quantum chemistry, and reinforcement learning.
 
-3. Future Trends in QNN Research and Applications
-    * What are the upcoming developments in QNNs over the next 6-12 months?
-    * Industry adoption: Are companies like IBM, Google, or Microsoft investing in QNNs?
-    * What challenges need to be solved before QNNs can compete with classical networks?
+## Research Focus
 
-4. Demonstration: Prototyping or Simulating a QNN
-    * Use a simulator like Qiskit or PennyLane to implement a HQNN.
-      * Possibly implementing QNN in a Multi-Agent System (MAS) with Dr. Srikanth
-    * Compare the performance of the HQNN to a classical NN.
+### 1. Survey of HQNNs
+- Overview of quantum machine learning fundamentals: superposition, entanglement, variational quantum circuits (VQCs).
+- Comparison between classical and hybrid quantum architectures.
+- Summary of performance gains and implementation bottlenecks across fields like healthcare, NLP, and chemistry.
+
+### 2. Experimental Benchmarking
+- **Implemented a HQNN model** using PennyLane and TensorFlow on the MNIST dataset.
+- Compared HQNN vs. classical CNN on:
+  - Accuracy
+  - Parameter count
+  - Floating-point operations (FLOPs)
+  - Training time
+- HQNN achieved ~88% parameter reduction with comparable accuracy, but significantly higher training time due to quantum simulation overhead.
+
+### 3. Explorations in Reinforcement Learning
+- Ongoing work integrates HQNNs into a **multi-agent simulation in AirSim**, where a drone uses a quantum-enhanced model to guide a car along a path.
+- Investigates HQNNs for dynamic decision-making under partial observability.
+
+### 4. Futures & Ethical Implications
+- Analyzed short-term trends: circuit cutting, parameter-shift optimization, interpretability tools like Q-LIME.
+- Evaluated industry investment from IBM, Microsoft, Amazon.
+- Discussed responsible deployment in sensitive sectors (e.g., healthcare, finance).
+
+## Tools & Frameworks
+
+- **Quantum Tools:** [PennyLane](https://pennylane.ai/), Qiskit (planned)
+- **Classical ML:** TensorFlow, Keras
+- **Simulation & Control:** AirSim (Unreal Engine), Python-based control panel
+- **Analysis & Visualization:** Matplotlib, JSON, keras-flops
+
+## Key Results
+
+| Model                   | Accuracy | Params   | FLOPs     | Training Time |
+|------------------------|----------|----------|-----------|----------------|
+| Classical CNN (baseline) | 98.92%   | 93,322   | 5.6M      | 80.7 s         |
+| HQNN (AngleEmbedding)  | 97.55%   | 11,162   | 2.0M      | 6665.6 s       |
+
+HQNNs show **superior parameter efficiency**, offering promise for embedded systems and constrained environments, despite longer training times.
+
+## 🔬 Future Work
+
+- Finalize RL experiments integrating HQNNs as policy networks.
+- Test HQNNs on real quantum hardware (e.g., IBM Q or AWS Ocelot).
+- Explore interpretability frameworks like Q-LIME in RL settings.
+- Contribute benchmarking templates for HQNN reproducibility.
+
+## 🧠 Citation
+
+If you reference this work, please cite:
+
+```bibtex
+@article{nerud2025hqnn,
+  title={Evaluating Hybrid Quantum Neural Networks: Efficiency, Viability, and the Path Forward},
+  author={Nerud, Andrew},
+  journal={Capstone Research, Saint John's University},
+  year={2025}
+}
+```
